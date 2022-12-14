@@ -1,9 +1,9 @@
 const env = require('dotenv').config()
 const app = require('express')()
+const OpenAiRouter = require('./routes/openai.routes')
 
-app.get('/', (req, res)=> {
-    console.log('Server listing to index /')
-})
+
+app.use('/openai', OpenAiRouter)
 
 
 const PORT = process.env.PORT || 5000
