@@ -1,8 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const { generateImage } = require('../controllers/openai.controller')
 
-router.get('/generateImage', (req, res) => {
-    console.log('From Open AI endpoint...')
-})
+router.get('/generateImage', generateImage)
 
 module.exports = router;
