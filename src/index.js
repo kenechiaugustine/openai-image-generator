@@ -1,7 +1,8 @@
 const env = require('dotenv').config()
-const app = require('express')()
+const express = require('express')
 const OpenAiRouter = require('./routes/openai.routes')
 
+const app = express()
 
 app.use('/openai', OpenAiRouter)
 
