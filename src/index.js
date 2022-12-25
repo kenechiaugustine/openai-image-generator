@@ -37,6 +37,13 @@ app.get('/getSysInfo', (req, res) => {
     
 })
 
+app.all('*', (req, res) => {
+    res.json({
+        errorCode: "404",
+        message: "Page not found"
+    })
+})
+
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
