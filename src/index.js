@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/openai', OpenAiRouter)
 
-app.get('/getSysInfo', (req, res) => {
+app.get('/sysInfo', (req, res) => {
     
     const interfaces = os.networkInterfaces();
     const addresses = [];
